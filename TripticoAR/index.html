@@ -25,66 +25,66 @@
       
       <audio id="audiolinux" src="Que es Linux.mp3" preload="auto"></audio>
       <audio id="audiojava" src="Que es Java.mp3" preload="auto"></audio>
-      <audio id="audioradar" src="Qu es Java.mp3" preload="auto"></audio>
+      <audio id="audioradar" src="Que es Java.mp3" preload="auto"></audio>
     </a-assets>
 
-   <!-- Primer marcador -->
-<a-marker 
-  type="barcode" 
-  value="10" 
-  raycaster="objects: .clickable" 
-  emitevents="true" 
-  cursor="fuse: false; rayOrigin: mouse;">
-  <a-entity 
-    gltf-model="#modelo" 
-    scale="0.08 0.08 0.08"  <!-- Escala aún más pequeña -->
-    position="0.21721 1.14717 1.54133" <!-- Aleja más el objeto -->
-    rotation="-90 18.159 -0.634" <!-- Ajusta la rotación para evitar que aparezca boca abajo -->
-    class="clickable" 
-    gesture-handler>
-  </a-entity>
-</a-marker>
+    <!-- Primer marcador -->
+    <a-marker 
+      type="barcode" 
+      value="10" 
+      raycaster="objects: .clickable" 
+      emitevents="true" 
+      cursor="fuse: false; rayOrigin: mouse;">
+      <a-entity 
+        gltf-model="#modelo" 
+        scale="0.08 0.08 0.08"  <!-- Escala más pequeña -->
+        position="0.21721 1.14717 1.54133" <!-- Aleja el objeto -->
+        rotation="0 0 0" <!-- Ajuste para corregir la rotación -->
+        class="clickable" 
+        gesture-handler>
+      </a-entity>
+    </a-marker>
 
-<!-- Segundo marcador -->
-<a-marker 
-  type="barcode" 
-  value="21" 
-  raycaster="objects: .clickable" 
-  emitevents="true" 
-  cursor="fuse: false; rayOrigin: mouse;">
-  <a-entity 
-    gltf-model="#modelo2" 
-    scale="0.08 0.08 0.08"  <!-- Escala aún más pequeña -->
-    position="0.161 0.027 0.410" 
-    rotation="-4.764 18.272 18.756" 
-    class="clickable" 
-    gesture-handler
-    sound="src: #audioradar; autoplay: false; volume: 1">
-  </a-entity>
-</a-marker>
+    <!-- Segundo marcador -->
+    <a-marker 
+      type="barcode" 
+      value="21" 
+      raycaster="objects: .clickable" 
+      emitevents="true" 
+      cursor="fuse: false; rayOrigin: mouse;">
+      <a-entity 
+        gltf-model="#modelo2" 
+        scale="0.08 0.08 0.08"  <!-- Escala más pequeña -->
+        position="0.161 0.027 0.410" 
+        rotation="0 0 0" <!-- Ajuste para corregir la rotación -->
+        class="clickable" 
+        gesture-handler
+        sound="src: #audioradar; autoplay: false; volume: 1">
+      </a-entity>
+    </a-marker>
 
-<!-- Tercer marcador -->
-<a-marker 
-  type="barcode" 
-  value="40" 
-  raycaster="objects: .clickable" 
-  emitevents="true" 
-  cursor="fuse: false; rayOrigin: mouse;">
-  <a-entity 
-    gltf-model="#modelo3" 
-    scale="0.08 0.08 0.08"  <!-- Escala aún más pequeña -->
-    position="0.117 0.252 0.479" 
-    rotation="-20.027 14.129 6.120" 
-    class="clickable" 
-    gesture-handler>
-  </a-entity>
-</a-marker>
-
+    <!-- Tercer marcador -->
+    <a-marker 
+      type="barcode" 
+      value="40" 
+      raycaster="objects: .clickable" 
+      emitevents="true" 
+      cursor="fuse: false; rayOrigin: mouse;">
+      <a-entity 
+        gltf-model="#modelo3" 
+        scale="0.08 0.08 0.08"  <!-- Escala más pequeña -->
+        position="0.117 0.252 0.479" 
+        rotation="0 0 0" <!-- Ajuste para corregir la rotación -->
+        class="clickable" 
+        gesture-handler>
+      </a-entity>
+    </a-marker>
 
     <!-- Camera -->
     <a-entity camera></a-entity>
 
   </a-scene>
+
   <script>
     var audioLinux = document.getElementById('audiolinux');
     var audioJava = document.getElementById('audiojava');
@@ -132,6 +132,5 @@
       audioRadar.currentTime = 0;
     });
   </script>
-  
 </body>
 </html>
